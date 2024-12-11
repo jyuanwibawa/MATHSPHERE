@@ -13,7 +13,7 @@ if (!isset($_SESSION['username'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tampilan Buku</title>
-    <link rel="stylesheet" href="style slide buku.css">
+    <link rel="stylesheet" href="css/style_slide_buku.css">
 </head>
 <body>
 

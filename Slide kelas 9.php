@@ -14,7 +14,7 @@ if (!isset($_SESSION['username'])) {
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>MathPhrase - Pembelajaran Matematika</title>
-    <link rel="stylesheet" href="style slide kelas.css" />
+    <link rel="stylesheet" href="css/style_slide_kelas.css" />
   </head>
   <body>
     <style>@import url('https://fonts.cdnfonts.com/css/marykate');</style>

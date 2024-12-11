@@ -72,7 +72,7 @@ nav ul li a:hover {
 }
 
 #Home {
-    background-image: url("background\ atas.png");
+    background-image: url("../background\ atas.png");
     background-size: cover; 
     background-position: center; 
     background-repeat: no-repeat; 
@@ -114,7 +114,7 @@ section a {
 
 .video {
     margin-top: 30px;
-    background-image: url("background\ yt.png");
+    background-image: url("../background\ yt.png");
     background-size: cover; 
     background-position: center center; 
     background-repeat: no-repeat; 
@@ -156,7 +156,7 @@ section a {
 
 
 #kontak {
-    background-image: url("background\ footer.png");
+    background-image: url("../background\ footer.png");
     background-size: cover; 
     background-position: center center; 
     background-repeat: no-repeat; 

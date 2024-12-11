@@ -14,7 +14,7 @@ if (!isset($_SESSION['username'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mathsphere</title>
-    <link rel="stylesheet" href="style slide pilihan sumber belajar.css">
+    <link rel="stylesheet" href="css/style_slide_pilihan_sumber_belajar.css">
 </head>
 <body>
     <style>
