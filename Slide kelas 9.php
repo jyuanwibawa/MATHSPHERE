@@ -1,3 +1,13 @@
+<?php
+session_start();
+
+
+if (!isset($_SESSION['username'])) {
+    header('Location: Slide Login.html');
+    exit();
+}
+?>
+
 <!DOCTYPE html>
 <html lang="id">
   <head>
@@ -14,10 +24,18 @@
               <div class="logo"><img src="logo mathsphere.png" height="50"></div>
               <div class="menu">
                 <ul>
-                    <li><a href="Slide Home.html">Home</a></li>
+                    <li><a href="Slide Home.php">Home</a></li>
                     <a href="">
                         <img src="logo pengguna.png" height="35">
                     </a>
+                    <?php
+                    if (isset($_SESSION['username'])) {
+                        echo '<li>Hello, ' . htmlspecialchars($_SESSION['username']) . '!</li>';
+                        echo '<li><a href="logout.php">Logout</a></li>';
+                    } else {
+                        echo '<li><a href="login.php">Login</a></li>';
+                    }
+                    ?>
                 </ul>
             </div>
           </div>     
@@ -25,9 +43,9 @@
       </nav>
 
     <div class="kelas-container">
-      <a href="Slide kelas 7.html"class="tbl-blue">Kelas 7</a>
-      <a href="Slide kelas 8.html"class="tbl-blue">Kelas 8</a>
-      <a href="Slide kelas 9.html"class="tbl-blue">Kelas 9</a>
+      <a href="Slide kelas 7.php"class="tbl-blue">Kelas 7</a>
+      <a href="Slide kelas 8.php"class="tbl-blue">Kelas 8</a>
+      <a href="Slide kelas 9.php"class="tbl-blue">Kelas 9</a>
     </div>
 
     <div class="materi-container">
@@ -39,25 +57,25 @@
       <div class="materi-card">
         <img src="spldv.jpg" alt="SPLDV" />
         <h2>SPLDV</h2>
-        <a href="Slide pilihan sumber belajar.html">Pelajari Sekarang</a>
+        <a href="Slide pilihan sumber belajar.php">Pelajari Sekarang</a>
       </div>
 
       <div class="materi-card">
         <img src="ruang.jpg" alt="Bangun Ruang" />
         <h2>Bangun Ruang</h2>
-        <a href="Slide pilihan sumber belajar.html">Pelajari Sekarang</a>
+        <a href="Slide pilihan sumber belajar.php">Pelajari Sekarang</a>
       </div>
 
       <div class="materi-card">
         <img src="trigonometri 1.png" alt="Transformasi Geometri" />
         <h2>Transformasi Geometri</h2>
-        <a href="Slide pilihan sumber belajar.html">Pelajari Sekarang</a>
+        <a href="Slide pilihan sumber belajar.php">Pelajari Sekarang</a>
       </div>
 
       <div class="materi-card">
         <img src="peluang.jpg" alt="Peluang dan Pemilihan Sampel" />
         <h2>Peluang dan Pemilihan Sampel</h2>
-        <a href="Slide pilihan sumber belajar.html">Pelajari Sekarang</a>
+        <a href="Slide pilihan sumber belajar.php">Pelajari Sekarang</a>
       </div>
     </div>
   </body>

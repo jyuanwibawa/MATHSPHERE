@@ -1,3 +1,12 @@
+<?php
+session_start();
+
+
+if (!isset($_SESSION['username'])) {
+    header('Location: Slide Login.html');
+    exit();
+}
+?>
 <!DOCTYPE html>
 <html lang="id">
 <head>
@@ -18,11 +27,19 @@
             <div class="logo"><img src="logo mathsphere.png" height="50"></div>
             <div class="menu">
                 <ul>
-                    <li><a href="Slide Home.html">Home</a></li>
-                    <li><a href="Slide kelas 7.html">Materi</a></li>
+                    <li><a href="Slide Home.php">Home</a></li>
+                    <li><a href="Slide kelas 7.php">Materi</a></li>
                     <a href="">
                         <img src="logo pengguna.png" height="35">
                     </a>
+                    <?php
+                    if (isset($_SESSION['username'])) {
+                        echo '<li>Hello, ' . htmlspecialchars($_SESSION['username']) . '!</li>';
+                        echo '<li><a href="logout.php">Logout</a></li>';
+                    } else {
+                        echo '<li><a href="login.php">Login</a></li>';
+                    }
+                    ?>
                 </ul>
             </div>
         </div>    

@@ -1,3 +1,13 @@
+<?php
+session_start();
+
+
+if (!isset($_SESSION['username'])) {
+    header('Location: Slide Login.html');
+    exit();
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,9 +29,17 @@
     </div>                
         <div class="menu">
             <ul>
-                <li><a href="Slide Home.html">Home</a></li>
-                <li><a href="Slide kelas 7.html">Materi</a></li>
+                <li><a href="Slide Home.php">Home</a></li>
+                <li><a href="Slide kelas 7.php">Materi</a></li>
                 <li><a href=""><img src="logo pengguna.png"height="35"></a></li>
+                <?php
+                    if (isset($_SESSION['username'])) {
+                        echo '<li>Hello, ' . htmlspecialchars($_SESSION['username']) . '!</li>';
+                        echo '<li><a href="logout.php">Logout</a></li>';
+                    } else {
+                        echo '<li><a href="login.php">Login</a></li>';
+                    }
+                    ?>
             </ul>
         </div>
     </nav>
@@ -41,14 +59,14 @@
             <div class="book-section">
                 <img src="buku.png" alt="Book Icon" class="book-img">
                 <div class="book-button">
-                    <h1><a href="Slide Buku.html"class="tbl-biru">Book</a></h1>
+                    <h1><a href="Slide Buku.php"class="tbl-biru">Book</a></h1>
                 </div>
             </div>
             
             <div class="video-section">
                 <img src="video.png" alt="Video Icon" class="video-img">
                 <div class="video-button">
-                    <h1><a href="Slide Video.html"class="tbl-biru">Video</a></h1>
+                    <h1><a href="Slide Video.php"class="tbl-biru">Video</a></h1>
                 </div>
             </div>
         </div>
