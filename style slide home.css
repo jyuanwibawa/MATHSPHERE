@@ -1,0 +1,271 @@
+* {
+    text-decoration: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    margin: 0px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.Header {
+    width: 100%;
+    position: relative;
+    margin-left: 20px;
+}
+
+.logo {
+    margin-top: 9px;
+    float: left;
+}
+
+.menu {
+    float: right;
+    margin-right: 14px;
+}
+
+nav {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    line-height: 30px;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+    background: #4475af;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+    overflow: hidden;
+}
+
+nav ul li {
+    float: left;
+    padding: 0px 16px 0px 16px;
+    margin-top: 20px;
+}
+
+nav ul a img {
+    margin-top: 16px;
+    margin-left: 16px;
+    margin-right: 16px;
+}
+
+nav ul li a {
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-family: 'Marykate', sans-serif;
+    font-size: 25px;                                        
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+#Home {
+    background-image: url("background\ atas.png");
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-attachment: scroll;
+    height: 790px;
+}
+
+.KataPengantar {
+    max-width: 405px; 
+    max-height: 305px; 
+    margin-left: 90px;
+    padding-top: 120px;
+    overflow: hidden;
+}
+
+.responsive {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.kelas {
+    text-align: center;
+    margin-bottom: 20px;
+    padding: 0;
+}
+
+.Iconkelas {
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+section a {
+    margin-left: 40px;
+    margin-right: 40px;
+    text-align: center;
+}
+
+.video {
+    margin-top: 30px;
+    background-image: url("background\ yt.png");
+    background-size: cover; 
+    background-position: center center; 
+    background-repeat: no-repeat; 
+    width: 100%;
+    height: 620px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#content2 ul iframe {
+    margin-top: 128px;
+    margin-left: 150px;
+    width: 480px;
+    height: 310px;
+}
+
+#content3 ul {
+    float: left;
+    margin-left: 150px;
+}
+
+#content3 ul li {
+    margin-right: 100px;
+    margin-top: 230px;
+    padding: 0;
+    color: #4475af;
+    text-decoration: none;
+    overflow: hidden;
+    font-family: 'Marykate', sans-serif;
+    font-size: 24px;
+}
+
+#content3 ul li p {
+    margin-top: 10px;
+    margin-left: 10px;
+    font-family: 'Schoolbell', sans-serif;
+    font-size: 15px;
+}
+
+
+#kontak {
+    background-image: url("background\ footer.png");
+    background-size: cover; 
+    background-position: center center; 
+    background-repeat: no-repeat; 
+    width: 100%;
+    height: 350px;
+    padding: 30px 0px 30px 0px;
+}
+
+.footer {
+    width: 93%;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 35px 0px 0px 80px;
+}
+
+.footer-section {
+    width: 25%;
+    margin: 0 auto;
+    color: white;
+}
+
+.footer-section ul {
+    display: flex;
+    align-items: center;
+}
+
+.footer-section ul a {
+    margin-top: 15px;
+    margin-right: 15px
+}
+
+h3 {
+    font-family: 'lexend';
+    font-weight: 800;
+    font-size: 30px;
+    color: #4475af;
+    line-height: 70px;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+}
+
+.footer p {
+    font-family: 'Glory', sans-serif;
+    font-size: 20px;
+    letter-spacing: 1px;
+    margin-bottom: 9px
+}
+
+#copyright {
+    text-align: center;
+    width: 100%;
+    padding: 20px 0px 20px 0px;
+    color: #4475af;
+}
+
+
+@media (max-width: 800px) {
+    .responsive {
+        width: 80%;
+        height: auto;
+    }
+    
+    .KataPengantar {
+        margin-left: 50px;
+        padding-top: 150px;
+    }
+
+    .video {
+        height: auto;
+        flex-direction: column;
+    }
+
+    #content2 ul iframe {
+        margin-top: 30px;
+        margin-left: 90px;
+        width: 30%;
+        height: auto;
+    }
+
+    #content3 ul {
+        float: left;
+        width: 60%;
+    }
+
+    #content3 ul li {
+        margin-right: 0;
+        margin-left: 10px;
+        margin-top: 0;
+        font-size: 18px;
+    }
+
+    #content3 ul li p {
+        margin-top: 5px;
+        margin-left: 0;
+        font-size: 12px;
+    }
+
+    #kontak {
+        height: auto;
+    }
+
+    .footer {
+        flex-direction: column;
+        align-items: center;
+        margin: 5px 0px 0px 15px;
+    }
+
+    .footer-section {
+        width: 100%;
+        text-align: center;
+    }
+
+    .footer-section ul {
+        justify-content: center;
+    }
+}

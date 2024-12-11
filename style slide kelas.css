@@ -1,0 +1,177 @@
+body {
+  font-family: Arial, Helvetica, sans-serif, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-image: url("background\ layar.png");
+  background-size: 100%;
+  height: 100%;
+}
+
+.Header {
+  width: 100%;
+  position: relative;
+  margin-left: 20px;
+}
+
+.logo {
+  margin-top: 9px;
+  float: left;
+}
+
+.menu {
+  float: right;
+  margin-right: 14px;
+}
+
+nav {
+  width: 100%;
+  margin: auto;
+  display: flex;
+  line-height: 30px;
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+  background: #4475af;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0px;
+  padding: 0px;
+  overflow: hidden;
+}
+
+nav ul li {
+  float: left;
+  padding: 0px 16px 0px 16px;
+  margin-top: 20px;
+}
+
+nav ul a img {
+  margin-top: 16px;
+  margin-left: 16px;
+  margin-right: 16px;
+}
+
+nav ul li a {
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  font-family: 'Marykate', sans-serif;
+  font-size: 25px;                                        
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+a.tbl-blue {
+  border-radius: 15px;
+  margin-top: 10px;
+  margin-left: 10px;
+  padding: 4px 17px 4px 17px;
+  color: white;
+  cursor: pointer;
+  background: #81c2eb;
+}
+
+a.tbl-blue:hover {
+  background: #81c2eb;
+  text-decoration: none;
+}
+
+.kelas-container {
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+  margin-top: 20px;
+  color: white;
+  font-family: 'Marykate', sans-serif;
+  font-size: 26px;
+}
+
+.kelas-container a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  margin-right: 13x;
+  margin-top: 3px;
+}
+
+.materi-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 35px;
+  padding: 20px;
+  margin-top: 50px;
+  margin-left: 150px;
+  margin-right: 150px;
+  margin-bottom: 63px;
+}
+
+.materi-card {
+  text-align: center;
+  width: 200px;
+  transition: transform 0.3s ease;
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.materi-card:hover {
+  transform: scale(1.05);
+}
+
+.materi-card img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.materi-card h2 {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+  color: #1e3c72;
+}
+
+.materi-card a {
+  color: #2a5298;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.materi-card a:hover {
+  text-decoration: underline;
+}
+
+.alat-tulis {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background-image: url('alat_tulis.png');
+  background-size: cover;
+  opacity: 0.5;
+  border-radius: 10px;
+}
+
+.alat-tulis.top-left {
+  top: 10px;
+  left: 10px;
+}
+
+.alat-tulis.top-right {
+  top: 10px;
+  right: 10px;
+}
+
+.alat-tulis.bottom-left {
+  bottom: 10px;
+  left: 10px;
+}
+
+.alat-tulis.bottom-right {
+  bottom: 10px;
+  right: 10px;
+}

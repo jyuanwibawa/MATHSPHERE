@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-image: url("background\ layar.png");
+            background-size: 100%;
+        }
+
+        #Header {
+            width: 100%;
+            margin-left: 20px;
+        }
+
+        .logo {
+            margin-top: 9px;
+            float: left;
+        }
+
+        nav {
+            width: 100%;
+            display: flex;
+            line-height: 30px;
+            position: sticky;
+            position: -webkit-sticky;
+            top: 0;
+            background: #4475af;
+        }
+
+
+        .content {
+            display: flex;
+            justify-content: space-around;
+            width: 80%;
+            margin-top: 80px;
+            margin-bottom: 70px;
+            max-width: 60%;
+        }
+
+        .welcome-box {
+            background-color: white;
+            padding: 0;
+            align-items: center;
+            border-radius: 15px;
+            width: 40%;
+            height: auto;
+            font-family: 'Gluten', sans-serif;
+            border: 2px dashed #4475af;
+        }
+                               
+        .welcome-box h1  {
+            text-align: center;
+            color: #007BFF;
+            font-family: 'Gluten', sans-serif;
+            font-size: 60px;    
+        }
+
+        .welcome-box p {
+            text-align: center;
+            color: #007BFF;
+            font-family: 'Gluten', sans-serif;
+            font-size: 28px;
+        }
+        
+        .welcome-box img {
+            width: 50%;
+            display: block;
+            margin: auto;
+            margin-top: 20px;
+        }
+
+        .wrapper {
+            width: 380px;
+            height: 440px;
+            background: transparent;
+            border:2px solid rgba(255, 255, 255, .5);
+            border-radius: 20px;
+            backdrop-filter: blur(20px);
+            box-shadow: 0 0 30px rgba(0, 0, 0, .5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            transition: height .2s ease;
+        }
+
+        .wrapper.active {
+            height: 520px;
+        }
+
+        .wrapper .form-box {
+            width: 100%;
+            padding: 40px;
+        }
+
+        .wrapper .form-box.login {
+            transition: transform .18s ease;
+            transform: translateX(0);
+        }
+
+        .wrapper.active .form-box.login {
+            transition: none;
+            transform: translateX(-400px);
+        }
+
+        .wrapper .form-box.register {
+            position: absolute;
+            transition: none;
+            transform: translateX(400px);
+            width: 70%;
+        }
+
+        .wrapper.active .form-box.register {
+            transition: transform .18s ease;
+            transform: translateX(0);
+        }
+
+        .form-box h2 {
+            font-size: 50px;
+            text-align: center; 
+            color: #fff;
+            font-family: 'LINEMAS', sans-serif; 
+            letter-spacing: 4px;  
+        }
+
+        .input-box {
+            position: relative;
+            width: 100%;
+            height: 50px;
+            border-bottom: 2px solid #162938;
+            margin: 30px 0;
+        }
+
+        .input-box label {
+            position: absolute;
+            top: 50%;
+            left: 5px;
+            transform: translateY(-50%);
+            font-size: 15px;
+            color: #fff;
+            font-weight: 500;
+            pointer-events: none;
+            transition: .5s;
+        }
+
+        .input-box input:focus~label,
+        .input-box input:valid~label {
+            top: -5px;
+        }
+
+        .input-box input {
+            width: 100%;
+            height: 100%;
+            background: transparent;
+            border: none;
+            outline: none;
+            font-size: 15px;
+            color: black;
+            font-weight: 600;
+            padding: 0 35px 0 5px;
+        }
+
+        .input-box .icon {
+            position: absolute;
+            right: 8px;
+            font-size: 20px;
+            color: #fff;
+            line-height: 57px;
+        }
+
+        .remember-forgot {
+            font-size: 15px;
+            color: #fff;
+            font-weight: 500;
+            margin: -15px 0 15px;
+            display: flex;
+            justify-content: space-between;
+        }
+        
+       .remember-forgot label input {
+            accent-color: #fff;
+            margin-right: 3px;
+       }
+
+        .remember-forgot a {
+            color: #fff;
+            text-decoration: none;
+        }
+        
+        .remember-forgot a:hover {
+            text-decoration: underline;
+        }
+
+        .btn {
+            width: 100%;
+            height: 45px;
+            background: #4475af;
+            border: none;
+            outline: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 15px;
+            color: #fff;
+            font-weight: 500;
+
+        }
+
+        .login-register {
+            font-size: 15px;
+            color: #fff;
+            text-align: center;
+            font-weight: 500;
+            margin: 25px 0 10px;
+
+        }
+
+        .login-register p a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .login-register p a:hover {
+            text-decoration: underline;
+        }
+
+    </style>
+</head>
+
+
+<body>
+<nav>
+    <section id="Header">
+        <div class="container">
+            <div class="logo"><img src="logo mathsphere.png" height="50"></div>
+        </div>
+    </section>
+</nav>
+
+    <div class="content">
+        <div class="welcome-box">
+            <h1>Halo!</h1>
+            <p>Selamat Datang Di Mathsphere</p>
+            <img src="Icon Anak.png">
+            <style>
+                @import url('https://fonts.cdnfonts.com/css/gluten');
+            </style>
+        </div>
+        
+        <div class="wrapper">
+            <div class="form-box login">
+                <form action="Slide Home.html">
+                    <h2>Login</h2>
+                    <style>
+                        @import url('https://fonts.cdnfonts.com/css/linemas');
+                    </style>
+                
+                    <div class="input-box">
+                        <span class="icon"><ion-icon name="person"></ion-icon></span>     
+                        <input type="text" required>
+                        <label>Username</label>
+                    </div>
+                    <div class="input-box">
+                        <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
+                        <input type="password" required>
+                        <label>Password</label>
+                    </div> 
+
+                    <div class="remember-forgot">
+                        <label><input type="checkbox"> Remember me</label>
+                        <a href="#">Forgot password?</a>
+                    </div>
+
+                    <button type="submit" class="btn">Login</button>
+
+                    <div class="login-register">
+                        <p>Don't have an account? <a href="#" class="register-link">Register</a></p>
+                    </div>
+                </form>
+            </div>
+
+            <div class="form-box register">
+                <form action="Slide Login.html">
+                    <h2>Registration</h2>
+                    <style>
+                        @import url('https://fonts.cdnfonts.com/css/linemas');
+                    </style>
+                
+                    <div class="input-box">
+                        <span class="icon"><ion-icon name="mail"></ion-icon></span>     
+                        <input type="email" required>
+                        <label>Email</label>
+                    </div>
+                    <div class="input-box">
+                        <span class="icon"><ion-icon name="person"></ion-icon></span>     
+                        <input type="text" required>
+                        <label>Username</label>
+                    </div>
+                    <div class="input-box">
+                        <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
+                        <input type="password" required>
+                        <label>Password</label>
+                    </div> 
+
+                    <div class="remember-forgot">
+                        <label><input type="checkbox"> I agree to the terms & conditions</label>
+                    </div>
+
+                    <button type="submit" class="btn">Login</button>
+
+                    <div class="login-register">
+                        <p>Already have an account? <a href="Slide Login.html" class="login-link">Login</a></p>
+                    </div>
+                </form>
+            </div>
+            </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    
+</body>
+</html>
