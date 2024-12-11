@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="id">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -58,12 +57,12 @@
             font-family: 'Gluten', sans-serif;
             border: 2px dashed #4475af;
         }
-
-        .welcome-box h1 {
+                               
+        .welcome-box h1  {
             text-align: center;
             color: #007BFF;
             font-family: 'Gluten', sans-serif;
-            font-size: 60px;
+            font-size: 60px;    
         }
 
         .welcome-box p {
@@ -72,7 +71,7 @@
             font-family: 'Gluten', sans-serif;
             font-size: 28px;
         }
-
+        
         .welcome-box img {
             width: 50%;
             display: block;
@@ -84,7 +83,7 @@
             width: 380px;
             height: 440px;
             background: transparent;
-            border: 2px solid rgba(255, 255, 255, .5);
+            border:2px solid rgba(255, 255, 255, .5);
             border-radius: 20px;
             backdrop-filter: blur(20px);
             box-shadow: 0 0 30px rgba(0, 0, 0, .5);
@@ -128,10 +127,10 @@
 
         .form-box h2 {
             font-size: 50px;
-            text-align: center;
+            text-align: center; 
             color: #fff;
-            font-family: 'LINEMAS', sans-serif;
-            letter-spacing: 4px;
+            font-family: 'LINEMAS', sans-serif; 
+            letter-spacing: 4px;  
         }
 
         .input-box {
@@ -187,17 +186,17 @@
             display: flex;
             justify-content: space-between;
         }
-
-        .remember-forgot label input {
+        
+       .remember-forgot label input {
             accent-color: #fff;
             margin-right: 3px;
-        }
+       }
 
         .remember-forgot a {
             color: #fff;
             text-decoration: none;
         }
-
+        
         .remember-forgot a:hover {
             text-decoration: underline;
         }
@@ -234,103 +233,57 @@
         .login-register p a:hover {
             text-decoration: underline;
         }
+
     </style>
 </head>
-
-
 <body>
-    <nav>
-        <section id="Header">
-            <div class="container">
-                <div class="logo"><img src="logo mathsphere.png" height="50"></div>
-            </div>
-        </section>
-    </nav>
-
-    <div class="content">
-        <div class="welcome-box">
-            <h1>Halo!</h1>
-            <p>Selamat Datang Di Mathsphere</p>
-            <img src="Icon Anak.png">
-            <style>
-                @import url('https://fonts.cdnfonts.com/css/gluten');
-            </style>
+<nav>
+    <section id="Header">
+        <div class="container">
+            <div class="logo"><img src="logo mathsphere.png" height="50"></div>
         </div>
+    </section>
+</nav>
 
-        <div class="wrapper">
-            <div class="form-box login">
-                <form action="login.php" method="POST">
-                    <h2>Login</h2>
-                    <style>
-                        @import url('https://fonts.cdnfonts.com/css/linemas');
-                    </style>
-
-                    <div class="input-box">
-                        <span class="icon"><ion-icon name="person"></ion-icon></span>
-                        <input type="text" name="username" required>
-                        <label>Username</label>
-                    </div>
-                    <div class="input-box">
-                        <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
-                        <input type="password" name="password" required>
-                        <label>Password</label>
-                    </div>
-
-                    <div class="remember-forgot">
-                        <label><input type="checkbox"> Remember me</label>
-                        <a href="#">Forgot password?</a>
-                    </div>
-
-                    <button type="submit" class="btn">Login</button>
-
-                    <div class="login-register">
-                        <p>Don't have an account? <a href="#" class="register-link">Register</a></p>
-                    </div>
-                </form>
-            </div>
-
-            <div class="form-box register">
-                <form action="register.php" method="POST">
-                    <h2>Registration</h2>
-                    <style>
-                        @import url('https://fonts.cdnfonts.com/css/linemas');
-                    </style>
-
-                    <div class="input-box">
-                        <span class="icon"><ion-icon name="mail"></ion-icon></span>
-                        <input type="email" name="email" required>
-                        <label>Email</label>
-                    </div>
-                    <div class="input-box">
-                        <span class="icon"><ion-icon name="person"></ion-icon></span>
-                        <input type="text" name="username" required>
-                        <label>Username</label>
-                    </div>
-                    <div class="input-box">
-                        <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
-                        <input type="password" name="password" required>
-                        <label>Password</label>
-                    </div>
-
-                    <div class="remember-forgot">
-                        <label><input type="checkbox"> I agree to the terms & conditions</label>
-                    </div>
-
-
-                    <button type="submit" class="btn">Login</button>
-
-                    <div class="login-register">
-                        <p>Already have an account? <a href="Slide Login.html" class="login-link">Login</a></p>
-                    </div>
-                </form>
-            </div>
-        </div>
+<div class="content">
+    <div class="welcome-box">
+        <h1>Halo!</h1>
+        <p>Selamat Datang Di Mathsphere</p>
+        <img src="Icon Anak.png">
     </div>
 
-    <script src="script.js"></script>
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <div class="wrapper">
+        <div class="form-box login">
+            <form action="Slide Home.html">
+                <h2>Login</h2>
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="person"></ion-icon></span>     
+                    <input type="text" required>
+                    <label>Username</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
+                    <input type="password" required>
+                    <label>Password</label>
+                </div> 
 
+                <div class="remember-forgot">
+                    <label><input type="checkbox"> Remember me</label>
+                    <a href="#">Forgot password?</a>
+                </div>
+
+                <button type="submit" class="btn">Login</button>
+
+                <div class="login-register">
+                    <p>Don't have an account? <a href="register.html" class="register-link">Register</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
-
 </html>
